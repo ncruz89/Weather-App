@@ -43,7 +43,7 @@ const weather = {
     document.querySelector(".city").innerText = `Weather in ${name}`;
     document.querySelector(
       ".icon"
-    ).src = `http://openweathermap.org/img/wn/${icon}.png`;
+    ).src = `https://openweathermap.org/img/wn/${icon}.png`;
     document.querySelector(".description").innerText = description;
     tempContainer.innerHTML =
       Math.round(temp) + `${unit === "imperial" ? " &#x2109" : " &#8451"}`;
