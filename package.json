@@ -4,8 +4,8 @@
   "description": "",
   "source": "index.html",
   "scripts": {
-    "start": "parcel build index.html --dist-dir build --no-source-maps",
-    "dev": "parcel"
+    "build": "parcel build index.html",
+    "start": "parcel"
   },
   "author": "Nathan Cruz",
   "license": "ISC",
