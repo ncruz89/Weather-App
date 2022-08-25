@@ -4,8 +4,8 @@
   "description": "",
   "source": "index.html",
   "scripts": {
-    "start": "parcel",
-    "build": "parcel build"
+    "start": "parcel build",
+    "dev": "parcel"
   },
   "author": "Nathan Cruz",
   "license": "ISC",
