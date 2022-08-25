@@ -34,7 +34,6 @@ const weather = {
    * @param {String} unit - the current units being used
    */
   displayWeather: function (data, unit) {
-    console.log(data);
     const { name } = data;
     const { icon, description } = data.weather[0];
     const { temp, humidity } = data.main;
@@ -71,13 +70,11 @@ searchBtn.addEventListener("click", function () {
 });
 
 document.addEventListener("keyup", function (e) {
-  console.log(e);
   if (e.key === "Enter") weather.search();
 });
 
 // toggle button that switches between metric and imperial units
 unitToggleBtn.addEventListener("click", function () {
-  console.log(currSearch);
   if (this.classList.contains("active")) {
     this.classList.remove("active");
     unitHeader.innerHTML = "&#x2109";
@@ -104,11 +101,10 @@ window.addEventListener("load", function () {
     try {
       const pos = await getLocation();
       const { latitude: lat, longitude: lng } = pos.coords;
-      console.log(lat, lng);
+
       const revGeo = await fetch(`https://geocode.xyz/${lat},${lng}?json=1`);
-      console.log(revGeo);
+
       if (!revGeo.ok) {
-        console.log(revGeo);
         // geocode.xyz likes to throw 403 errors for a reason i couldn't find on client side
         // here's a work around
         if (revGeo.status === 403) return window.location.reload();
