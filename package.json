@@ -4,7 +4,7 @@
   "description": "",
   "source": "index.html",
   "scripts": {
-    "start": "parcel build index.html",
+    "start": "parcel build index.html --dist-dir build --no-source-maps",
     "dev": "parcel"
   },
   "author": "Nathan Cruz",
