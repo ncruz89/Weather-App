@@ -2,14 +2,26 @@
   "name": "weather-app",
   "version": "1.0.0",
   "description": "",
-  "source": "index.html",
+  "main": "src/index.js",
   "scripts": {
-    "build": "parcel build index.html",
-    "start": "parcel"
+    "start": "node src/index.js",
+    "dev": "env-cmd -f ./config/dev.env nodemon src/index.js"
   },
-  "author": "Nathan Cruz",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ncruz89/Weather-App.git"
+  },
+  "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ncruz89/Weather-App/issues"
+  },
+  "homepage": "https://github.com/ncruz89/Weather-App#readme",
   "devDependencies": {
-    "parcel": "^2.7.0"
+    "env-cmd": "^10.1.0",
+    "nodemon": "^2.0.19"
+  },
+  "dependencies": {
+    "express": "^4.18.1"
   }
 }
